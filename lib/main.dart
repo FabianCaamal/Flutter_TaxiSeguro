@@ -28,6 +28,7 @@ class MyApp extends StatelessWidget {
     );
   }
 
+  // mapas para las rutas
   Map<String, WidgetBuilder> _rutas(){
     return <String, WidgetBuilder>{
       'wallet': (context) => MyWalletPage(),
