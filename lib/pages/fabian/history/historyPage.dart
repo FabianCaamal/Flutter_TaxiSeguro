@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:taxi_seguro/components/appBarComp.dart';
-import 'package:taxi_seguro/pages/fabian/historyRegistro.dart';
+import 'package:taxi_seguro/pages/fabian/history/historyRegistro.dart';
 
 class HistoryPage extends StatelessWidget {
   @override
@@ -15,20 +15,18 @@ class HistoryPage extends StatelessWidget {
               fechas('Enero', '26', 'Sab'),
               fechas('Enero', '27', 'Dom'),
               fechas('Enero', '28', 'Lun'),
-              fechas('Enero', '29', 'Mar'),
             ],
           ),
-          Center(
-            child: Row(
-              mainAxisAlignment: MainAxisAlignment.center,
-              children: [
-                _tarjetas('Total Jobs', '\$10.0', Icons.local_car_wash),
-                _tarjetas('Ganado', '\$500.0', Icons.attach_money),
-              ],
-            ),
+          Row(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: [
+              _tarjetas('Total Jobs', '\$10.0', Icons.local_car_wash),
+              _tarjetas('Ganado', '\$500.0', Icons.attach_money),
+            ],
           ),
-          registro(),
-          registro(),
+          registro('Pedro', 'Viaje', 25.0),
+          registro('Saul', 'Viaje', 20.0),
+          // registro(),
         ],
       ),
     );
@@ -52,16 +50,16 @@ class HistoryPage extends StatelessWidget {
   Widget _tarjetas(String dato, String total, IconData icono){
     return Container(
       color: Colors.amber[400],
-      width: 200.0,
+      width: 190.0,
       height: 100.0,
-      margin: EdgeInsets.all(5.0),
+      margin: EdgeInsets.all(2),
       child: Row(
         children: [
-          Container(child: Icon(icono, size: 40.0,), margin: EdgeInsets.all(15.0)),
+          Container(child: Icon(icono, size: 35.0,), margin: EdgeInsets.all(12.0)),
           Column(
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
-              _txt(dato, 25.0),
+              _txt(dato, 23.0),
               _txt(total, 20.0),
             ],
           ),

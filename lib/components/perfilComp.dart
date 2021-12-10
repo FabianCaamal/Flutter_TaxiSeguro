@@ -5,12 +5,13 @@ Widget cabezera(){
     child: Column(
       children: [
         Container(
+          margin: EdgeInsets.only(top: 20.0),
           height: 110.0,
           child: ClipOval(
             child: Image.asset('assets/driver.jpeg'),
           ),
         ),
-        Text('Fabian Caamal', style: TextStyle(fontSize: 24.0),),
+        Text('Mario Mena', style: TextStyle(fontSize: 24.0),),
         // _tipoMiembro(),
       ],
     ),

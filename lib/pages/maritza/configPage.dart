@@ -17,7 +17,7 @@ class _ConfigPageState extends State<ConfigPage> {
           children:<Widget>[
             Card(
               child: ListTile(
-                title: Text("Fabian Caamal",style:TextStyle(color: Colors.black)),
+                title: Text("Mario Mena",style:TextStyle(color: Colors.black)),
                 subtitle: Text("Gold member",style:TextStyle(color: Colors.black54)),
                 leading: CircleAvatar(
                   backgroundImage: AssetImage('assets/driver.jpeg')

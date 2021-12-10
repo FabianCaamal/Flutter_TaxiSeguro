@@ -8,11 +8,11 @@ class NotifiPage extends StatelessWidget {
       appBar: appBarComp('Notificaciones'),
       body: ListView(
         children: [
-          notifi('Promocion', '10% de descuento'),
+          notifi('Gracias por su preferencia', 'Califica el servicio'),
           Divider(),
-          notifi('Promocion', '10% de descuento'),
+          notifi('En 5 min. llega su taxista', 'Ver su ubicacion'),
           Divider(),
-          notifi('Promocion', '10% de descuento'),
+          notifi('¡Se viene actualización!', 'Mira los nuevos cambios que vendran...'),
           Divider(),
           notifi('Promocion', '10% de descuento'),
         ],
@@ -25,7 +25,7 @@ class NotifiPage extends StatelessWidget {
       // padding: EdgeInsets.all(10.0),
       child: ListTile(
         leading: Icon(Icons.notifications, color: Colors.amber[400],),
-        title: Text(titulo, style: TextStyle(fontSize: 23.0),),
+        title: Text(titulo, style: TextStyle(fontSize: 20.0, fontWeight: FontWeight.w600),),
         subtitle: Text(sub),
         trailing: Icon(Icons.arrow_right),
         onTap: (){},

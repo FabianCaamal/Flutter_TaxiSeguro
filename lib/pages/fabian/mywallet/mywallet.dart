@@ -54,23 +54,17 @@ class MyWalletPage extends StatelessWidget {
       margin: EdgeInsets.only(left: 20.0, right: 20.0),
       child: Column(
         children: [
+          crearItem('Fabian Caamal', 2332, '25.00'),
           ListTile(
-            leading: CircleAvatar(backgroundImage: NetworkImage('https://studiosol-a.akamaihd.net/uploadfile/letras/fotos/2/5/7/4/2574f9070ce48b988fe2693a60c40427.jpg'),),
-            title: Text('Fabian Caamal'),
-            subtitle: Text('#2332'),
-            trailing: Text('\$25.00', style: TextStyle(fontSize: 20.0)),
-            onTap: (){},
-          ),
-          ListTile(
-            leading: CircleAvatar(backgroundImage: NetworkImage('https://studiosol-a.akamaihd.net/uploadfile/letras/fotos/2/5/7/4/2574f9070ce48b988fe2693a60c40427.jpg'),),
-            title: Text('Ricardo Caamal'),
+            leading: CircleAvatar(backgroundImage: NetworkImage('https://iteragrow.com/wp-content/uploads/2018/04/buyer-persona-e1545248524290.jpg'),),
+            title: Text('Jessica Haas'),
             subtitle: Text('#2332'),
             trailing: Text('\$20.00', style: TextStyle(fontSize: 20.0),),
             onTap: (){},
           ),
           ListTile(
-            leading: CircleAvatar(backgroundImage: NetworkImage('https://studiosol-a.akamaihd.net/uploadfile/letras/fotos/2/5/7/4/2574f9070ce48b988fe2693a60c40427.jpg'),),
-            title: Text('Ricardo Caamal'),
+            leading: CircleAvatar(backgroundImage: NetworkImage('https://static.wikia.nocookie.net/naruto/images/c/c8/Itachi_Uchiha_Parte_I_y_II_Anime.png/revision/latest?cb=20170113110759&path-prefix=es'),),
+            title: Text('Roberto Pinto'),
             subtitle: Text('#2332'),
             trailing: Text('\$20.00', style: TextStyle(fontSize: 20.0),),
             onTap: (){},
@@ -79,4 +73,15 @@ class MyWalletPage extends StatelessWidget {
       ),
     );
   }
+
+  Widget crearItem (String name, int numero, String pago) {
+    return ListTile(
+      leading: CircleAvatar(backgroundImage: NetworkImage('https://studiosol-a.akamaihd.net/uploadfile/letras/fotos/2/5/7/4/2574f9070ce48b988fe2693a60c40427.jpg'),),
+      title: Text(name),
+      subtitle: Text('#$numero'),
+      trailing: Text('\$$pago', style: TextStyle(fontSize: 20.0)),
+      onTap: (){},
+    );
+  }
+
 }

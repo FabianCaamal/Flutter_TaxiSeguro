@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 
-Widget registro(){
+Widget registro(String name, String tipo, double distancia ){
   return Container(
-    margin: EdgeInsets.all(25.0),
+    margin: EdgeInsets.only(top: 15),
     color: Colors.amber[50],
     child: Column(
       children: [
@@ -14,15 +14,15 @@ Widget registro(){
             ),
             Column(
               children: [
-                _txt('Nombre', 20.0),
-                _txt('tipo', 18.0),
+                _txt(name, 20.0),
+                _txt('Tipo: $tipo', 18.0),
               ],
             ),
             Padding(
               padding: const EdgeInsets.only(left: 150.0),
               child: Column(  
                 children: [
-                  _txt('\$25.0', 25.0),
+                  _txt('\$$distancia', 25.0),
                   _txt('2.2 km', 16.0)
                 ],
               ),
@@ -32,7 +32,6 @@ Widget registro(){
         Card(
           child: Column(
             children: [
-              datos(),
               datos(),
               datos(),
             ],

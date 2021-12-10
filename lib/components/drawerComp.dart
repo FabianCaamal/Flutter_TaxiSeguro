@@ -11,14 +11,23 @@ Widget drawerComp(BuildContext context){
       padding: EdgeInsets.only(right: 12.0, top: 20.0, left: 12.0),
       children: [
         ListTile(
-          trailing: Icon(Icons.power_settings_new, size: 30.0, color: colorUni)
+          trailing: Icon(Icons.power_settings_new, size: 30.0, color: colorUni),
+          onTap: () => Navigator.pushNamed(context, 'login'),
         ),
+
         cabezera(),
+        
         Divider(color: Colors.white,),
         ListTile(
           leading: Icon(Icons.home),
           title: Text('My Wallet'),
           onTap: () => Navigator.pushNamed(context, 'wallet'),
+        ),
+        divisor(),
+        ListTile(
+          leading: Icon(Icons.airport_shuttle),
+          title: Text('Taxistas'),
+          onTap: () => Navigator.pushNamed(context, 'taxistas'),
         ),
         divisor(),
         ListTile(
